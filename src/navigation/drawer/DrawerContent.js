@@ -6,6 +6,8 @@ import MarketPrice from '../../screens/MarketPrice';
 import VideoScreen from '../../screens/VideoScreen';
 import AboutScreen from '../../screens/AboutScreen';
 import ContactExpert from '../../screens/ContactExpert';
+import BlogContent from '../../screens/BlogContent';
+import Login from '../../screens/Login';
 
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {
@@ -32,6 +34,7 @@ import {
   DrawerItemList,
   DrawerItem,
 } from '@react-navigation/drawer';
+import LoginScreen from '../../screens/Welcomepage';
 
 const Drawer = createDrawerNavigator();
 const Tab = createBottomTabNavigator();
@@ -93,5 +96,7 @@ export const DrawerNavigator = () => (
       name={NAVIGATION_TO_CONTACTEXPERT_SCREEN}
       component={ContactExpert}
     />
+    <Drawer.Screen name={'blogcontent'} component={BlogContent} />
+    <Drawer.Screen name={'Login'} component={Login} />
   </Drawer.Navigator>
 );

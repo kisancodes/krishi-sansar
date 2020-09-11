@@ -29,8 +29,8 @@ const MarketPrice = ({navigation}) => {
   return (
     <View>
       <Header title="Market Price" />
-      <View style={{marginTop: '20%'}}>
-        <Cards vegetables={pricevegetable} />
+      <View style={{padding: 15}}>
+        <Cards leftTitle="Potato" rightContent="Rs 120/kg" />
       </View>
     </View>
   );

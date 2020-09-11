@@ -5,7 +5,7 @@ import Header from '../components/ui/Header';
 const VideoScreen = () => {
   return (
     <View>
-      <Header title="Home" />
+      <Header title="Video" />
       {/* <View style={{marginTop: '80%'}}>
         <Text>HOME</Text>
       </View> */}
