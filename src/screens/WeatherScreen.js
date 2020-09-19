@@ -1,9 +1,31 @@
 import React from 'react';
-import Cards from '../components/ui/Card';
+import {WeatherCards} from '../components/ui/Card';
 import {View, Text, StyleSheet} from 'react-native';
 import Header from '../components/ui/Header';
 import {CloudIcon} from '../components/ui/Icon';
 const WeatherScreen = () => {
+  let cityDetail = [
+    {
+      city: 'Kathmandu',
+      degree: '22°c',
+    },
+    {
+      city: 'Pokhara',
+      degree: '19°c',
+    },
+    {
+      city: 'Nepalgunj',
+      degree: '29°c',
+    },
+    {
+      city: 'Dharan',
+      degree: '33°c',
+    },
+    {
+      city: 'Chitwan',
+      degree: '35°c',
+    },
+  ];
   return (
     <View style={{flex: 1}}>
       <Header title="Weather" />
@@ -22,8 +44,16 @@ const WeatherScreen = () => {
             22
           </Text>
         </View>
-
-        <Cards leftTitle="kathmandu" rightContent="22c" />
+        {cityDetail.map((item, index) => {
+          return (
+            <WeatherCards
+              citiesDetail={item}
+              key={index}
+              id={index}
+              // style={{paddingBottom: 10}}
+            />
+          );
+        })}
       </View>
     </View>
   );

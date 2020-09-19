@@ -12,8 +12,8 @@ const CustomTextInput = () => {
           color: 'pink',
           backgroundColor: 'red',
           fontSize: 18,
-          lineHeight: 20,
-          paddingHorizontal: 20,
+          // lineHeight: 20,
+          // paddingHorizontal: 20,
         }}
         placeholder="Type here to translate!"
       />

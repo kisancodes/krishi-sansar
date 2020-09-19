@@ -43,6 +43,7 @@ export const TabNavigator = () => (
   <Tab.Navigator headerMode="none">
     <Tab.Screen
       name={NAVIGATION_TO_HOME_SCREEN}
+      // name="homepage"
       component={HomeScreen}
       options={{
         tabBarIcon: () => <HomeIcon />,

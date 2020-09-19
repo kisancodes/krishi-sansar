@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text, StyleSheet, View} from 'react-native';
+import {Text, StyleSheet, View, ScrollView} from 'react-native';
 import Header from '../components/ui/Header';
 import Cards from '../components/ui/Card';
 
@@ -25,12 +25,51 @@ const MarketPrice = ({navigation}) => {
       vegetable: 'banana',
       price: 'RS 120/kg',
     },
+    {
+      vegetable: 'grapes',
+      price: 'RS 120/kg',
+    },
+    {
+      vegetable: 'corn crops',
+      price: 'RS 120/kg',
+    },
+    {
+      vegetable: 'blueberry',
+      price: 'RS 120/kg',
+    },
+    {
+      vegetable: 'watermelon',
+      price: 'RS 120/kg',
+    },
+    {
+      vegetable: 'lichi',
+      price: 'RS 120/kg',
+    },
+    {
+      vegetable: 'pineapple',
+      price: 'RS 120/kg',
+    },
+    {
+      vegetable: 'ginger',
+      price: 'RS 120/kg',
+    },
   ];
   return (
     <View>
       <Header title="Market Price" />
       <View style={{padding: 15}}>
-        <Cards leftTitle="Potato" rightContent="Rs 120/kg" />
+        <ScrollView style={{marginHorizontal: 10}}>
+          {pricevegetable.map((item, index) => {
+            return (
+              <Cards
+                vegetableDetail={item}
+                key={index}
+                id={index}
+                // style={{paddingBottom: 10}}
+              />
+            );
+          })}
+        </ScrollView>
       </View>
     </View>
   );

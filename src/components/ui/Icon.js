@@ -71,6 +71,18 @@ export function HomeIcon(props) {
         fill="#5C5C5C"
       />
     </Svg>
+
+    // <Svg
+    //   width="35"
+    //   height="29"
+    //   viewBox="0 0 35 29"
+    //   fill="none"
+    //   xmlns="http://www.w3.org/2000/svg">
+    //   <Path
+    //     d="M14 29V18.7647H21V29H29.75V15.3529H35L17.5 0L0 15.3529H5.25V29H14Z"
+    //     fill="#5C5C5C"
+    //   />
+    // </Svg>
   );
 }
 export function MarketIcon(props) {
