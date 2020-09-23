@@ -1,9 +1,27 @@
-import React from 'react';
+import React, {useEffect} from 'react';
+import axios from 'axios';
 import {WeatherCards} from '../components/ui/Card';
 import {View, Text, StyleSheet} from 'react-native';
 import Header from '../components/ui/Header';
 import {CloudIcon} from '../components/ui/Icon';
 const WeatherScreen = () => {
+  useEffect(async () => {
+    let city = ['Pokhara', 'kathamndu'];
+
+    city.map((item) => {
+      axios({
+        method: 'get',
+        url: `api.openweathermap.org/data/2.5/weather?q=${item}&appid=a4ab8d7f2f40fd2b60d320410dce8b70`,
+      })
+        .then(function (response) {
+          console.log('jvkjc=>', response.data.main.temp);
+        })
+        .catch(function (error) {
+          console.log('error=>', error);
+        });
+    });
+  }, []);
+
   let cityDetail = [
     {
       city: 'Kathmandu',

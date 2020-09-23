@@ -8,11 +8,14 @@ const Login = () => {
         <Text style={{marginBottom: 10}}>Full Name</Text>
         <View
           style={{
+            alignItems: 'center',
+            justifyContent: 'center',
+            flex: 1,
             backgroundColor: 'blue',
             // width: '80%',
-            flexDirection: 'row',
-            justifyContent: 'center',
-            alignContent: 'center',
+            // flexDirection: 'row',
+            // justifyContent: 'center',
+            // alignContent: 'center',
           }}>
           <CustomTextInput />
         </View>

@@ -73,14 +73,15 @@ const BlogScreen = () => {
   ];
   return (
     <SafeAreaView style={{flex: 1}}>
-      <Header title="Blog" />
-      <View style={{padding: 15}}>
-        <ScrollView style={{marginHorizontal: 20}}>
+      <ScrollView>
+        <Header title="Blog" />
+        <View style={{padding: 15}}>
+          {/* <ScrollView style={{marginHorizontal: 20}}> */}
           {BlogDetails.map((item, index) => {
             return <BlogScreenCard blogdetail={item} key={index} />;
           })}
-        </ScrollView>
-      </View>
+        </View>
+      </ScrollView>
     </SafeAreaView>
   );
 };

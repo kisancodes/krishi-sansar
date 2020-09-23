@@ -56,9 +56,9 @@ const MarketPrice = ({navigation}) => {
   ];
   return (
     <View>
-      <Header title="Market Price" />
-      <View style={{padding: 15}}>
-        <ScrollView style={{marginHorizontal: 10}}>
+      <ScrollView>
+        <Header title="Market Price" />
+        <View style={{padding: 15}}>
           {pricevegetable.map((item, index) => {
             return (
               <Cards
@@ -69,8 +69,8 @@ const MarketPrice = ({navigation}) => {
               />
             );
           })}
-        </ScrollView>
-      </View>
+        </View>
+      </ScrollView>
     </View>
   );
 };

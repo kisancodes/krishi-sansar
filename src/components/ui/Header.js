@@ -64,6 +64,7 @@ const styles = StyleSheet.create({
     flex: 2,
     alignItems: 'center',
     justifyContent: 'center',
+    marginRight: 20,
   },
   headerTitleText: {
     fontSize: 18,
