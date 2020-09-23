@@ -44,9 +44,9 @@ const ContactExpert = () => {
   ];
   return (
     <View style={{flex: 1}}>
-      <Header title="ContactExpert" />
-      <View style={{padding: 15}}>
-        <ScrollView style={{marginHorizontal: 10}}>
+      <ScrollView>
+        <Header title="ContactExpert" />
+        <View style={{padding: 15}}>
           {ExpertDetails.map((item, index) => {
             return <ExpertCard exportdetail={item} key={index} />;
           })}
@@ -115,8 +115,8 @@ const ContactExpert = () => {
           
           </View>
         </View> */}
-        </ScrollView>
-      </View>
+        </View>
+      </ScrollView>
     </View>
   );
 };

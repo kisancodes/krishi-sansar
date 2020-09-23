@@ -13,7 +13,7 @@
  * @flow strict-local
  */
 
-import React from 'react';
+import React, {useEffect} from 'react';
 import {
   SafeAreaView,
   StyleSheet,
@@ -30,10 +30,16 @@ import {
   DebugInstructions,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+import SplashScreen from 'react-native-splash-screen';
 import {MainNavigation} from './src/navigation/MainNavigation';
 import {SafeAreaProvider} from 'react-native-safe-area-context';
 
 const App = () => {
+  useEffect(() => {
+    // Update the document title using the browser API
+    SplashScreen.hide();
+  });
+
   return (
     <SafeAreaProvider>
       <View style={{flex: 1}}>

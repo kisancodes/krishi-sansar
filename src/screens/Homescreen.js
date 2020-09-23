@@ -1,38 +1,60 @@
 import React from 'react';
 
-import {View, Text, Image, StyleSheet, ScrollView} from 'react-native';
+import {
+  View,
+  Text,
+  Image,
+  StyleSheet,
+  ScrollView,
+  TouchableOpacity,
+} from 'react-native';
+import {WelcomeIcon} from '../components/ui/Icon';
 import Homepic from '../assets/images/homepic.png';
 import Homepic1 from '../assets/images/home2.png';
 import Homepic2 from '../assets/images/home3.png';
-
+import {useNavigation} from '@react-navigation/native';
 import {SemiBoldText} from '../components/ui/Text';
 
 const HomeScreen = () => {
+  const navigation = useNavigation();
   return (
-    <View style={{flex: 1, backgroundColor: 'green'}}>
-      <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-        <Text
+    <View style={{flex: 1, backgroundColor: '#01A560'}}>
+      <View style={styles.headerContentAndroid}>
+        <TouchableOpacity
+          style={{marginLeft: '5%'}}
+          onPress={() => navigation.toggleDrawer()}>
+          <WelcomeIcon />
+        </TouchableOpacity>
+        <View
           style={{
-            fontFamily: 'Roboto',
-            fontStyle: 'normal',
-            fontWeight: 'normal',
-            fontSize: 16,
-            lineHeight: 19,
-            color: '#FFFFFF',
+            flex: 1,
+            justifyContent: 'center',
+            alignItems: 'center',
+            marginRight: 30,
           }}>
-          Current Temperature
-        </Text>
-        <Text
-          style={{
-            fontFamily: 'Roboto',
-            fontStyle: 'normal',
-            fontWeight: 'normal',
-            fontSize: 64,
-            lineHeight: 75,
-            color: '#FFFFFF',
-          }}>
-          29
-        </Text>
+          <Text
+            style={{
+              fontFamily: 'Roboto',
+              fontStyle: 'normal',
+              fontWeight: 'normal',
+              fontSize: 16,
+              lineHeight: 19,
+              color: '#FFFFFF',
+            }}>
+            Current Temperature
+          </Text>
+          <Text
+            style={{
+              fontFamily: 'Roboto',
+              fontStyle: 'normal',
+              fontWeight: 'normal',
+              fontSize: 64,
+              lineHeight: 75,
+              color: '#FFFFFF',
+            }}>
+            29
+          </Text>
+        </View>
       </View>
       <View
         style={{
@@ -212,5 +234,16 @@ const HomeScreen = () => {
     </View>
   );
 };
+const styles = StyleSheet.create({
+  headerContentAndroid: {
+    marginTop: 40,
+    // bottom: -15,
+    flex: 1,
+    // alignItems: 'center',
+    flexDirection: 'row',
+    // width: '100%',
+    justifyContent: 'space-between',
+  },
+});
 
 export default HomeScreen;

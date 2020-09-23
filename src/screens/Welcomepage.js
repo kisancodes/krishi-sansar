@@ -1,22 +1,76 @@
 import React, {useState, useEffect} from 'react';
 
-import {View, Text, StyleSheet, Image, Button} from 'react-native';
+import {
+  View,
+  Text,
+  StyleSheet,
+  Image,
+  Button,
+  TouchableOpacity,
+} from 'react-native';
 
 // import {useDispatch} from 'react-redux';
+// import {useNavigation} from '@react-navigation/native';
 import LogoWelcome from '../assets/images/WelcomeLogo.png';
 // import {useNavigation} from '@react-navigation/native';:use child component
 import HomeScreen from '../screens/Homescreen';
 import {NAVIGATION_TO_HOME_SCREEN} from '.././navigation/route';
 const LoginScreen = ({navigation}) => {
+  // const [navigatelogin, setNavigateLogin] = useState(<Login />);
+  // const navigation = useNavigation();
+  // useEffect(() => {
+  //  const timeoutHandle = setTimeout(()=>{
+  //     // Add your logic for the transition
+  //    .navigation.navigate('navigation.navigate('Main'));
+  // }, 5000);
+  // useEffect(() => {
+  //   const timer = setTimeout(() => {
+  //     navigation.navigate(('Main')
+  //   }, 1000);
+  //   )}
+
   return (
     // <View style={styles.logincontainer}>
     <View style={styles.logincontainer}>
       {/* <Text>HELLO</Text> */}
       <Image source={LogoWelcome} />
-      <Button
-        title="Continue To App"
-        onPress={() => navigation.navigate('Main')}
-      />
+      <Button title="achikha " />
+      {/* <TouchableOpacity>
+        <View
+          style={{
+            bottom: -230,
+            justifyContent: 'flex-end',
+            backgroundColor: 'red',
+            width: '70%',
+          }}>
+          <View
+            style={{
+              // width: '70%',
+              height: 50,
+              // borderStyle: 'medium',
+              borderWidth: 5,
+              // borderWidth:1,
+              borderColor: 'white',
+              borderRadius: 24,
+
+              // backgroundColor: 'white',
+              alignItems: 'center',
+            justifyContent: 'center',
+            }}>
+            <Text
+              style={{
+                fontFamily: 'Roboto',
+                fontStyle: 'normal',
+                fontWeight: 'normal',
+                fontSize: 13,
+                lineHeight: 15,
+                color: '#FFFFFF',
+              }}>
+              LETS'S GO
+            </Text>
+          </View>
+        </View>
+      </TouchableOpacity> */}
     </View>
   );
 };
