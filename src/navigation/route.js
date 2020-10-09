@@ -5,3 +5,4 @@ export const NAVIGATION_TO_WEATHER_SCREEN = 'weather';
 export const NAVIGATION_TO_VIDEO_SCREEN = 'video';
 export const NAVIGATION_TO_ABOUT_SCREEN = 'about';
 export const NAVIGATION_TO_CONTACTEXPERT_SCREEN = 'contactexpert';
+export const NAVIGATION_TO_BLOG_CONTENT = 'blogcontent';

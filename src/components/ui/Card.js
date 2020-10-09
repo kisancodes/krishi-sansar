@@ -46,6 +46,7 @@ const Cards = (props) => {
 export default Cards;
 
 export const WeatherCards = (props) => {
+  console.log('valke', props.citiesDetail);
   return (
     <View
       style={{
@@ -58,8 +59,6 @@ export const WeatherCards = (props) => {
         marginBottom: 15,
       }}>
       <View style={{justifyContent: 'center'}}>
-        {/* <View style={{flexDirection: 'row'}}> */}
-        {/* <Text>{props.id + 1} .</Text> */}
         <Text
           style={{
             fontFamily: 'Roboto',
@@ -252,7 +251,7 @@ export const BlogScreenCard = (props) => {
             fontSize: 16,
             lineHeight: 19,
           }}>
-          {props.blogdetail.heading}
+          {props.Heading}
         </Text>
 
         <Text
@@ -264,7 +263,7 @@ export const BlogScreenCard = (props) => {
             lineHeight: 16,
             color: '#959595',
           }}>
-          {props.blogdetail.date}
+          {props.date}
         </Text>
         <Text
           style={{
@@ -275,7 +274,7 @@ export const BlogScreenCard = (props) => {
             lineHeight: 19,
             // textAlign: 'justify',
           }}>
-          {props.blogdetail.description}
+          {props.description}
         </Text>
       </View>
     </View>

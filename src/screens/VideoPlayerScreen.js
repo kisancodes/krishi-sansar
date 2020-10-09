@@ -8,42 +8,44 @@ import {
   FlatList,
   Text,
 } from 'react-native';
-
-import {withNavigationFocus} from '@react-navigation/compat';
 // import {YoutubePlayer, VideoPlayList} from '../../chamchami-components';
 import YoutubePlayer from '../components/RCTYouTube';
 import VideoPlayList from '../components/PlayListCard';
 import Header from '../components/ui/Header';
-import {useIsFocused} from '@react-navigation/native';
+
+// import {View, Text, Icon} from '../../components';
+// import {RegExr} from '../../services';
+// import {connect} from 'react-redux';
+// import styles from './styles';
 let videoId = ['XS9kp88zC1U', 'bs3snp-7x-c', 'fWYM2k9Iscg', 'nQHjjmIVjTU'];
 
-let videos = [
+let videoId = [
   {
-    ThumbnailImagePath: 'https://via.placeholder.com/150',
-    YoutubeUrl: '1Boo311IVuc',
-    Title: "nilaa's blog",
+    ThumbnailImagePath: 'http://i3.ytimg.com/vi/01cc5or1728/hqdefault.jpg',
+    YoutubeUrl: '01cc5or1728',
+    Title: 'naughty',
     ShortDescription: 'sweetjhbhjb',
     Description: 'hvjhvdchjd',
   },
   {
-    ThumbnailImagePath: 'https://via.placeholder.com/250',
+    ThumbnailImagePath: 'http://i3.ytimg.com/vi/01cc5or1728/maxresdefault.jpg',
     YoutubeUrl: 'XS9kp88zC1U',
-    Title: "nilaa's blog",
+    Title: 'nlknlkcnvlkcn',
     ShortDescription: 'sweetjhbhjb',
     Description: 'hvjhvdchjd',
   },
   {
-    ThumbnailImagePath: 'https://via.placeholder.com/350',
+    ThumbnailImagePath: '',
     YoutubeUrl: 'fWYM2k9Iscg',
     Title: "nilaa's blog",
     ShortDescription: 'sweetjhbhjb',
     Description: 'hvjhvdchjd',
   },
   {
-    ThumbnailImagePath: 'https://via.placeholder.com/450',
+    ThumbnailImagePath: '',
     YoutubeUrl: 'nQHjjmIVjTU',
     Title: "nilaa's blog",
-    ShortDescription: 'gfdgfdgfdgfdgfgfddg',
+    ShortDescription: 'sweetjhbhjb',
     Description: 'hvjhvdchjd',
   },
 ];
@@ -60,14 +62,13 @@ class VideoPlayerScreen extends Component {
       youTubeUrl: null,
       VideoDetails: {
         YoutubeUrl: '1Boo311IVuc',
-        Title: "nilaa's blog",
+        Title: 'naugthy',
         ShortDescription: 'sweetjhbhjb',
         Description: 'hvjhvdchjd',
       },
     };
   }
-  // componentWillUnmount() {
-  // }
+
   _onPressExpand = () => {
     LayoutAnimation.configureNext(LayoutAnimation.Presets.easeInEaseOut);
     this.setState((prevState) => ({expand: !prevState.expand}));
@@ -78,9 +79,9 @@ class VideoPlayerScreen extends Component {
   };
 
   _renderVideos = ({item}) => {
-    // const VideoDetails = this.props.navigation.getParam('VideoDetails');
+    const VideoDetails = this.props.navigation.getParam('VideoDetails');
     const {ThumbnailImagePath, Title, ShortDescription, YoutubeUrl} = item;
-    return (
+    return VideoDetails.YoutubeUrl == item.YoutubeUrl ? null : (
       <VideoPlayList
         onPress={() => this._onPressVideo(item)}
         thumbnailImage={ThumbnailImagePath}
@@ -89,10 +90,8 @@ class VideoPlayerScreen extends Component {
       />
     );
   };
-  componentWillUnmount() {}
+
   render() {
-    const {isFocused} = this.props;
-    console.log('foxused=>', isFocused);
     // const VideoDetails = this.props.navigation.getParam('VideoDetails');
     const {
       YoutubeUrl,
@@ -101,8 +100,8 @@ class VideoPlayerScreen extends Component {
       Description,
     } = this.state.VideoDetails;
     const {expand} = this.state;
-    // const {videos} = this.props.VideosState;
-    return isFocused ? (
+    const {videos} = this.props.VideosState;
+    return (
       <View style={{flex: 1}}>
         <Header title="Videos" />
         <YoutubePlayer videoId={YoutubeUrl} />
@@ -121,21 +120,25 @@ class VideoPlayerScreen extends Component {
             </Text>
           </View>
           <TouchableOpacity onPress={this._onPressExpand}>
-            <Text>play</Text>
+            <Icon
+              type="MaterialIcons"
+              name={expand ? 'expand-more' : 'expand-less'}
+              size={24}
+            />
           </TouchableOpacity>
         </View>
         <View padd>
           <FlatList
-            extraData={this.state.VideoDetails}
+            extraData={VideoDetails}
             showsVerticalScrollIndicator={false}
             data={videos}
             renderItem={this._renderVideos}
-            keyExtractor={(item) => item.YoutubeUrl}
+            keyExtractor={(item) => item.Id.toString()}
           />
         </View>
       </View>
-    ) : null;
+    );
   }
 }
 
-export default withNavigationFocus(VideoPlayerScreen);
+export default VideoPlayerScreen;

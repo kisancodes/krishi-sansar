@@ -3,6 +3,7 @@ import View from 'react-native';
 import {createStackNavigator} from '@react-navigation/stack';
 import {NavigationContainer} from '@react-navigation/native';
 import {DrawerNavigator} from '../navigation/drawer/DrawerContent';
+import BlogContent from '../screens/BlogContent';
 // import WelcomePage from '../screens/Welcomepage';
 
 const MainStack = createStackNavigator();
@@ -21,6 +22,7 @@ export const MainNavigation = () => {
           options={{headerShown: false}}
           component={DrawerNavigator}
         />
+        <MainStack.Screen name="blogcontent" component={BlogContent} />
       </MainStack.Navigator>
     </NavigationContainer>
   );

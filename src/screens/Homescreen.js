@@ -94,7 +94,7 @@ const HomeScreen = () => {
               fontFamily: 'Roboto',
               fontStyle: 'normal',
               fontWeight: 'normal',
-              fontsize: 18,
+              fontSize: 18,
               lineHeight: 21,
             }}>
             Blogs
@@ -125,9 +125,9 @@ const HomeScreen = () => {
                   flexWrap: 'wrap',
                   fontFamily: 'Roboto',
                   fontStyle: 'normal',
-                  fontweight: 'bold',
-                  fontsize: 12,
-                  lineheight: 14,
+                  fontWeight: 'bold',
+                  fontSize: 12,
+                  lineHeight: 14,
                 }}>
                 What is Lorem Ipsum Lorem Ipsum is simply dummy text of the
                 printingdhvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
@@ -157,9 +157,9 @@ const HomeScreen = () => {
                   flexWrap: 'wrap',
                   fontFamily: 'Roboto',
                   fontStyle: 'normal',
-                  fontweight: 'bold',
-                  fontsize: 12,
-                  lineheight: 14,
+                  fontWeight: 'bold',
+                  fontSize: 12,
+                  lineHeight: 14,
                 }}>
                 What is Lorem Ipsum Lorem Ipsum is simply dummy text of the
                 printing
@@ -186,9 +186,9 @@ const HomeScreen = () => {
                 style={{
                   fontFamily: 'Roboto',
                   fontStyle: 'normal',
-                  fontweight: 'bold',
-                  fontsize: 12,
-                  lineheight: 14,
+                  fontWeight: 'bold',
+                  fontSize: 12,
+                  lineHeight: 14,
                 }}>
                 What is Lorem Ipsum Lorem Ipsum is simply dummy text of the
                 printing
@@ -218,9 +218,9 @@ const HomeScreen = () => {
                   flexWrap: 'wrap',
                   fontFamily: 'Roboto',
                   fontStyle: 'normal',
-                  fontweight: 'bold',
-                  fontsize: 12,
-                  lineheight: 14,
+                  fontWeight: 'bold',
+                  fontSize: 12,
+                  lineHeight: 14,
                 }}>
                 What is Lorem Ipsum Lorem Ipsum is simply dummy text of the
                 printing
