@@ -13,12 +13,24 @@ const Header = (props) => {
     <View style={styles.header}>
       {/* <WelcomeIcon /> */}
       <View style={styles.headerContentAndroid}>
+        {}
         <TouchableOpacity
           style={{marginLeft: '5%'}}
           onPress={() => navigation.toggleDrawer()}>
           <WelcomeIcon />
         </TouchableOpacity>
         {/* </View> */}
+        <View style={styles.headerTitle}>
+          <SemiBoldText text={props.title} style={styles.headerTitleText} />
+        </View>
+      </View>
+    </View>
+  );
+};
+export const BlogHeader = (props) => {
+  return (
+    <View style={styles.header}>
+      <View style={styles.headerContentAndroid}>
         <View style={styles.headerTitle}>
           <SemiBoldText text={props.title} style={styles.headerTitleText} />
         </View>

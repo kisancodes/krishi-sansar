@@ -1,13 +1,13 @@
 import React from 'react';
 import {View, Text, Image} from 'react-native';
-import Header from '../components/ui/Header';
+import {BlogHeader} from '../components/ui/Header';
 import Blogpic1 from '../assets/images/blogpic1.png';
 import Blogpic2 from '../assets/images/blogpic2.png';
 
 const BlogContent = () => {
   return (
     <View>
-      <Header title="Blogs" />
+      <BlogHeader title="Blogs" />
       <View style={{padding: 15}}>
         <Text
           style={{
