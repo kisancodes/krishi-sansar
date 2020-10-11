@@ -160,9 +160,10 @@ const HomeScreen = () => {
                     flexWrap: 'wrap',
                     fontFamily: 'Roboto',
                     fontStyle: 'normal',
-                    fontWeight: 'bold',
+                    fontWeight: 'normal',
                     fontSize: 12,
                     lineHeight: 14,
+                    fontColor: '#969393',
                   }}>
                   What is Lorem Ipsum Lorem Ipsum is simply dummy text of the
                   printingdhvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
@@ -192,9 +193,10 @@ const HomeScreen = () => {
                     flexWrap: 'wrap',
                     fontFamily: 'Roboto',
                     fontStyle: 'normal',
-                    fontWeight: 'bold',
+                    fontWeight: 'normal',
                     fontSize: 12,
                     lineHeight: 14,
+                    fontColor: '#969393',
                   }}>
                   What is Lorem Ipsum Lorem Ipsum is simply dummy text of the
                   printing
@@ -221,7 +223,7 @@ const HomeScreen = () => {
                   style={{
                     fontFamily: 'Roboto',
                     fontStyle: 'normal',
-                    fontWeight: 'bold',
+                    fontWeight: 'normal',
                     fontSize: 12,
                     lineHeight: 14,
                   }}>
@@ -253,7 +255,7 @@ const HomeScreen = () => {
                     flexWrap: 'wrap',
                     fontFamily: 'Roboto',
                     fontStyle: 'normal',
-                    fontWeight: 'bold',
+                    fontWeight: 'normal',
                     fontSize: 12,
                     lineHeight: 14,
                   }}>
