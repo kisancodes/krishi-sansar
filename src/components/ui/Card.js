@@ -155,7 +155,7 @@ export const ExpertCard = (props) => {
           </Text>
           <Text
             style={{
-              fontfamily: 'Roboto',
+              fontFamily: 'Roboto',
               fontStyle: 'normal',
               fontWeight: 'normal',
               fontSize: 16,

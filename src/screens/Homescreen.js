@@ -18,13 +18,16 @@ import {SemiBoldText} from '../components/ui/Text';
 const HomeScreen = () => {
   const [currentWeather, setCurrentWeather] = useState('');
   const navigation = useNavigation();
-  useEffect(async () => {
-    const response = await fetch(
-      `http://api.openweathermap.org/data/2.5/weather?q=Kathmandu&appid=a4ab8d7f2f40fd2b60d320410dce8b70`,
-    );
-    const result = await response.json();
-    console.log('result', result.main.temp);
-    setCurrentWeather(result.main.temp);
+  useEffect(() => {
+    async function getCurrent() {
+      const response = await fetch(
+        `http://api.openweathermap.org/data/2.5/weather?q=Kathmandu&appid=a4ab8d7f2f40fd2b60d320410dce8b70`,
+      );
+      const result = await response.json();
+      console.log('result', result.main.temp);
+      setCurrentWeather(result.main.temp);
+    }
+    getCurrent();
   }, []);
   return (
     <View style={{flex: 1, backgroundColor: '#01A560'}}>
