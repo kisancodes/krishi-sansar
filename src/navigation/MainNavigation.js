@@ -22,7 +22,11 @@ export const MainNavigation = () => {
           options={{headerShown: false}}
           component={DrawerNavigator}
         />
-        <MainStack.Screen name="blogcontent" component={BlogContent} />
+        <MainStack.Screen
+          name="blogcontent"
+          options={{headerShown: false}}
+          component={BlogContent}
+        />
       </MainStack.Navigator>
     </NavigationContainer>
   );

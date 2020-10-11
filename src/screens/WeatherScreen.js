@@ -5,54 +5,48 @@ import {View, Text, StyleSheet} from 'react-native';
 import Header from '../components/ui/Header';
 import {CloudIcon} from '../components/ui/Icon';
 const WeatherScreen = () => {
-  let cityDetail = [];
+  const [weatherLocation, setWeatherLocation] = useState('');
+  // let cityDetail = [];
   // const [cities, setCities] = useState([]);
 
-  const memoizedCallback = async () => {
-    const city = ['Kathmandu', 'Pokhara', 'Nepalgunj', 'Dharan'];
-    for (const id of city) {
+  useEffect(() => {
+    async function getCurrentweather() {
       const response = await fetch(
-        `http://api.openweathermap.org/data/2.5/weather?q=${id}&appid=a4ab8d7f2f40fd2b60d320410dce8b70`,
+        `http://api.openweathermap.org/data/2.5/weather?q=Kathmandu&appid=a4ab8d7f2f40fd2b60d320410dce8b70`,
       );
       const result = await response.json();
-      console.log('result', result);
-      // cityDetail.push({city: result.name, degree: result.main.temp});
+      console.log('result', result.main.temp);
+      setWeatherLocation(result.main.temp);
     }
-
-    console.log('weather', cityDetail);
-    // setCities(cityDetail);
-    // console.log('citiesname', cities);
-  };
-
-  React.useEffect(() => {
-    memoizedCallback();
-    // setCities(cityDetail);
-  }, [memoizedCallback]);
+    getCurrentweather();
+  }, []);
   // setCities(cityDetail);
   // console.log('helo', cities);
 
-  // let cityDetail = [
-  //   {
-  //     city: 'Kathmandu',
-  //     degree: '22°c',
-  //   },
-  //   {
-  //     city: 'Pokhara',
-  //     degree: '19°c',
-  //   },
-  //   {
-  //     city: 'Nepalgunj',
-  //     degree: '29°c',
-  //   },
-  //   {
-  //     city: 'Dharan',
-  //     degree: '33°c',
-  //   },
-  //   {
-  //     city: 'Chitwan',
-  //     degree: '35°c',
-  //   },
-  // ];
+  let cityDetail = [
+    {
+      city: 'Nepalgunj',
+      degree: '29°c',
+    },
+    {
+      city: 'Pokhara',
+      degree: '19°c',
+    },
+
+    {
+      city: 'Dharan',
+      degree: '33°c',
+    },
+    {
+      city: 'Kathmandu',
+      degree: '22°c',
+    },
+
+    {
+      city: 'Chitwan',
+      degree: '35°c',
+    },
+  ];
   return (
     <View style={{flex: 1}}>
       <Header title="Weather" />
@@ -60,16 +54,40 @@ const WeatherScreen = () => {
       <View style={{padding: 15}}>
         <View style={{justifyContent: 'center', alignItems: 'center'}}>
           <CloudIcon />
-          <Text
-            style={{
-              fontFamily: 'Roboto',
-              fontStyle: 'normal',
-              fontWeight: 'normal',
-              fontSize: 111,
-              lineHeight: 130,
-            }}>
-            22
-          </Text>
+          <View style={{flexDirection: 'row'}}>
+            <Text
+              style={{
+                fontFamily: 'Roboto',
+                fontStyle: 'normal',
+                fontWeight: 'normal',
+                fontSize: 111,
+                lineHeight: 130,
+              }}>
+              {weatherLocation - 273.15}
+            </Text>
+            <Text
+              style={{
+                fontFamily: 'Roboto',
+                fontStyle: 'normal',
+                fontWeight: 'normal',
+                fontSize: 59,
+                // color: '#FFFFFF',
+                lineHeight: 69,
+              }}>
+              °
+            </Text>
+            <Text
+              style={{
+                fontFamily: 'Roboto',
+                fontStyle: 'normal',
+                fontWeight: 'normal',
+                fontSize: 39,
+                // color: '#FFFFFF',
+                lineHeight: 49,
+              }}>
+              C
+            </Text>
+          </View>
         </View>
         {cityDetail.map((item, index) => {
           return (

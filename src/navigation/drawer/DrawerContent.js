@@ -61,8 +61,10 @@ export const TabNavigator = () => (
       },
     })}
     tabBarOptions={{
-      activeTintColor: 'red',
-      inactiveTintColor: 'pink',
+      // activeBackgroundColor: 'white',
+      // inactiveBackgroundColor: '#01A560',
+      // activeTintColor: 'blue',
+      // inactiveTintColor: 'pink',
       showLabel: false,
     }}>
     {/* // <Tab.Screen

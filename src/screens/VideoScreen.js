@@ -19,31 +19,46 @@ let videoId = ['XS9kp88zC1U', 'bs3snp-7x-c', 'fWYM2k9Iscg', 'nQHjjmIVjTU'];
 
 let videos = [
   {
-    ThumbnailImagePath: 'https://via.placeholder.com/150',
-    YoutubeUrl: '1Boo311IVuc',
-    Title: "nilaa's blog",
-    ShortDescription: 'sweetjhbhjb',
+    ThumbnailImagePath: 'http://i3.ytimg.com/vi/KtC3BC6T5uY/hqdefault.jpg',
+    YoutubeUrl: 'vW7mbAhA4rI',
+    Title: 'western agriculture',
+    ShortDescription: '2018 Compilation Video featuring several',
+    // Description: 'hvjhvdchjd',
+  },
+  {
+    ThumbnailImagePath: 'http://i3.ytimg.com/vi/FNn5DB1Zen4/hqdefault.jpg',
+    YoutubeUrl: 'FNn5DB1Zen4',
+    Title: 'Modern Technology Agriculture Huge Machines',
+    ShortDescription: 'planetapes',
     Description: 'hvjhvdchjd',
   },
   {
-    ThumbnailImagePath: 'https://via.placeholder.com/250',
-    YoutubeUrl: 'XS9kp88zC1U',
-    Title: "nilaa's blog",
-    ShortDescription: 'sweetjhbhjb',
+    ThumbnailImagePath: 'http://i3.ytimg.com/vi/mYalJjtK9tY/hqdefault.jpg',
+    YoutubeUrl: 'mYalJjtK9tY',
+    Title: 'TAFE Western Agriculture',
+    ShortDescription: 'TAFE Western support agricultural industries ',
     Description: 'hvjhvdchjd',
   },
   {
-    ThumbnailImagePath: 'https://via.placeholder.com/350',
-    YoutubeUrl: 'fWYM2k9Iscg',
-    Title: "nilaa's blog",
-    ShortDescription: 'sweetjhbhjb',
+    ThumbnailImagePath: 'http://i3.ytimg.com/vi/B3U5oYgXUIc/hqdefault.jpg',
+    YoutubeUrl: 'B3U5oYgXUIc',
+    Title: 'WOW! Amazing Agriculture Technology - Sweet & Chili Peppers',
+    ShortDescription: 'TSK-24',
     Description: 'hvjhvdchjd',
   },
   {
-    ThumbnailImagePath: 'https://via.placeholder.com/450',
-    YoutubeUrl: 'nQHjjmIVjTU',
-    Title: "nilaa's blog",
-    ShortDescription: 'gfdgfdgfdgfdgfgfddg',
+    ThumbnailImagePath: 'http://i3.ytimg.com/vi/S3tYjmzkH4s/hqdefault.jpg',
+    YoutubeUrl: 'S3tYjmzkH4s',
+    Title: 'Cool and Powerful Agriculture Machines ',
+    ShortDescription: 'TSK-24',
+    Description: 'hvjhvdchjd',
+  },
+  {
+    ThumbnailImagePath: 'http://i3.ytimg.com/vi/l4u8wZqOfXc/hqdefault.jpg',
+    YoutubeUrl: 'l4u8wZqOfXc',
+    Title: 'agriculture technology in Japan for modern cultivation of rice',
+    ShortDescription:
+      'this is an example of how Japanese people use modern technology',
     Description: 'hvjhvdchjd',
   },
 ];
@@ -59,9 +74,9 @@ class VideoPlayerScreen extends Component {
       expand: true,
       youTubeUrl: null,
       VideoDetails: {
-        YoutubeUrl: '1Boo311IVuc',
-        Title: "nilaa's blog",
-        ShortDescription: 'sweetjhbhjb',
+        YoutubeUrl: 'KtC3BC6T5uY',
+        Title: 'Potato Harvest 2020',
+        ShortDescription: 'Korean garderner',
         Description: 'hvjhvdchjd',
       },
     };
@@ -114,20 +129,39 @@ class VideoPlayerScreen extends Component {
             justifyContent: 'space-between',
           }}>
           <View style={{flex: 1}}>
-            <Text h3>{Title}</Text>
-            <Text h4>{ShortDescription}</Text>
-            <Text h4 style={{marginTop: 10}} numberOfLines={expand ? 1 : null}>
-              {Description}
+            <Text
+              style={{
+                fontFamily: 'Roboto',
+                fontStyle: 'normal',
+                fontWeight: 'bold',
+                fontSize: 16,
+                lineHeight: 19,
+              }}>
+              {Title}
             </Text>
+            <Text
+              style={{
+                color: '#959595',
+                fontFamily: 'Roboto',
+                fontStyle: 'normal',
+                fontWeight: 'normal',
+                fontSize: 14,
+                lineHeight: 16,
+              }}>
+              {ShortDescription}
+            </Text>
+            {/* <Text h4 style={{marginTop: 10}} numberOfLines={expand ? 1 : null}>
+              {Description}
+            </Text> */}
           </View>
-          <TouchableOpacity onPress={this._onPressExpand}>
+          {/* <TouchableOpacity onPress={this._onPressExpand}>
             <Text>play</Text>
-          </TouchableOpacity>
+          </TouchableOpacity> */}
         </View>
-        <View padd>
+        <View style={{flex: 1}}>
           <FlatList
             extraData={this.state.VideoDetails}
-            showsVerticalScrollIndicator={false}
+            showsVerticalScrollIndicator={true}
             data={videos}
             renderItem={this._renderVideos}
             keyExtractor={(item) => item.YoutubeUrl}

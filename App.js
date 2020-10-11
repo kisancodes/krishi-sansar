@@ -33,6 +33,7 @@ import {
 import SplashScreen from 'react-native-splash-screen';
 import {MainNavigation} from './src/navigation/MainNavigation';
 import {SafeAreaProvider} from 'react-native-safe-area-context';
+console.disableYellowBox = true;
 
 const App = () => {
   useEffect(() => {
