@@ -32,19 +32,25 @@ const BlogContent = () => {
         </Text>
         <Image source={Blogpic1} />
         <Text>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard
+          According to the Nepal Telecommunication Authority, there are more
+          than 38.3 million mobile phone users in Nepal. The estimated
+          population of Nepal is around 30 million.
         </Text>
         <Text>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard
+          The telecommunication regulatory body of Nepal says the number of
+          mobile phone users in the country is 34 percent higher than the total
+          population of the country. The number is increasing exponentially and
+          it is because mobile phones are not only used for communication but
+          also for knowledge learning and entertainment.
         </Text>
         <Image source={Blogpic2} />
         <Text>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard Lorem Ipsum is
-          simply dummy text of the printing and typesetting industry. Lorem
-          Ipsum has been the industry's standard{' '}
+          The use of the mobile phone in the older generation who are involved
+          in farming are also increasing. According to the Ministry of
+          Agriculture and Livestock Development, 66 percent of Nepalese people
+          rely on agriculture. According to the World Bank, agriculture is the
+          main source of food, income, and employment for the majority. It
+          provides about 33% of the Gross Domestic Product (GDP).
         </Text>
       </View>
     </View>

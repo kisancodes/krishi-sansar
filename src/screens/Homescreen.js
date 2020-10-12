@@ -153,7 +153,7 @@ const HomeScreen = () => {
                     fontSize: 12,
                     lineHeight: 14,
                   }}>
-                  Blog post 1
+                  Tips for doing agriculture in Hilly regions
                 </Text>
                 <Text
                   style={{
@@ -165,8 +165,8 @@ const HomeScreen = () => {
                     lineHeight: 14,
                     fontColor: '#969393',
                   }}>
-                  What is Lorem Ipsum Lorem Ipsum is simply dummy text of the
-                  printingdhvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
+                  According to the Nepal Telecommunication Authority, there are
+                  more than 38.3 million mobile phone...
                 </Text>
               </View>
             </View>
@@ -186,7 +186,7 @@ const HomeScreen = () => {
                     fontSize: 12,
                     lineHeight: 14,
                   }}>
-                  Blog post 2
+                  How to grow vegetables in scientific way in Hilli regions
                 </Text>
                 <Text
                   style={{
@@ -198,8 +198,9 @@ const HomeScreen = () => {
                     lineHeight: 14,
                     fontColor: '#969393',
                   }}>
-                  What is Lorem Ipsum Lorem Ipsum is simply dummy text of the
-                  printing
+                  Android application for seasonal Agro-Information is an
+                  application targeted for farmers across the country who use
+                  android mobile phones.
                 </Text>
               </View>
             </View>
@@ -217,7 +218,7 @@ const HomeScreen = () => {
                     fontSize: 12,
                     lineHeight: 14,
                   }}>
-                  Blog post 2
+                  How to harvest in scientific way in western Nepal
                 </Text>
                 <Text
                   style={{
@@ -227,8 +228,8 @@ const HomeScreen = () => {
                     fontSize: 12,
                     lineHeight: 14,
                   }}>
-                  What is Lorem Ipsum Lorem Ipsum is simply dummy text of the
-                  printing
+                  According to the Nepal Telecommunication Authority, there are
+                  more than 38.3 million
                 </Text>
               </View>
             </View>
@@ -248,7 +249,7 @@ const HomeScreen = () => {
                     fontSize: 12,
                     lineHeight: 14,
                   }}>
-                  Blog post 2
+                  Weather in Eastorn terial region for Dhan kheti
                 </Text>
                 <Text
                   style={{
