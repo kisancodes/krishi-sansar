@@ -125,144 +125,155 @@ const HomeScreen = () => {
             <View style={{paddingTop: 20, paddingBottom: 30}}>
               <Image source={Homepic} />
             </View>
-
-            <Text
-              style={{
-                fontFamily: 'Roboto',
-                fontStyle: 'normal',
-                fontWeight: 'normal',
-                fontSize: 18,
-                lineHeight: 21,
-              }}>
-              Blogs
-            </Text>
-            <View
-              style={{
-                flexDirection: 'row',
-                paddingTop: 15,
-              }}>
-              <View>
-                <Image source={Homepic1} />
+            <View style={{padding: 10}}>
+              <Text
+                style={{
+                  fontFamily: 'Roboto',
+                  fontStyle: 'normal',
+                  fontWeight: 'normal',
+                  fontSize: 18,
+                  lineHeight: 21,
+                }}>
+                Blogs
+              </Text>
+              <View
+                style={{
+                  flexDirection: 'row',
+                  // position: 'absolute',
+                  paddingTop: 15,
+                  // marginRight: 10,
+                }}>
+                <View>
+                  <Image source={Homepic1} />
+                </View>
+                <View style={{padding: 10, marginRight: 10}}>
+                  <Text
+                    style={{
+                      fontFamily: 'Roboto',
+                      fontStyle: 'normal',
+                      fontWeight: 'bold',
+                      fontSize: 12,
+                      lineHeight: 14,
+                    }}>
+                    Tips for doing agriculture in Hilly regions
+                  </Text>
+                  <Text
+                    style={{
+                      // flexWrap: 'wrap',
+                      fontFamily: 'Roboto',
+                      fontStyle: 'normal',
+                      fontWeight: 'normal',
+                      fontSize: 12,
+                      lineHeight: 14,
+                      fontColor: '#969393',
+                      marginRight: 10,
+                      maxWidth: 250,
+                    }}>
+                    According to the Nepal Telecommunication Authority, there
+                    are more than 38.3 million mobile phone...
+                  </Text>
+                </View>
               </View>
-              <View style={{padding: 10}}>
-                <Text
-                  style={{
-                    fontFamily: 'Roboto',
-                    fontStyle: 'normal',
-                    fontWeight: 'bold',
-                    fontSize: 12,
-                    lineHeight: 14,
-                  }}>
-                  Tips for doing agriculture in Hilly regions
-                </Text>
-                <Text
-                  style={{
-                    flexWrap: 'wrap',
-                    fontFamily: 'Roboto',
-                    fontStyle: 'normal',
-                    fontWeight: 'normal',
-                    fontSize: 12,
-                    lineHeight: 14,
-                    fontColor: '#969393',
-                  }}>
-                  According to the Nepal Telecommunication Authority, there are
-                  more than 38.3 million mobile phone...
-                </Text>
+              <View
+                style={{
+                  flexDirection: 'row',
+                }}>
+                <View>
+                  <Image source={Homepic2} />
+                </View>
+                <View style={{padding: 10}}>
+                  <Text
+                    style={{
+                      fontFamily: 'Roboto',
+                      fontStyle: 'normal',
+                      fontWeight: 'bold',
+                      fontSize: 12,
+                      lineHeight: 14,
+                      maxWidth: 250,
+                    }}>
+                    How to grow vegetables in scientific way in Hilli regions
+                  </Text>
+                  <Text
+                    style={{
+                      flexWrap: 'wrap',
+                      fontFamily: 'Roboto',
+                      fontStyle: 'normal',
+                      fontWeight: 'normal',
+                      fontSize: 12,
+                      lineHeight: 14,
+                      fontColor: '#969393',
+                      maxWidth: 250,
+                    }}>
+                    Android application for seasonal Agro-Information is an
+                    application targeted for farmers across the country who use
+                    android mobile phones.
+                  </Text>
+                </View>
               </View>
-            </View>
-            <View
-              style={{
-                flexDirection: 'row',
-              }}>
-              <View>
+              <View
+                style={{
+                  flexDirection: 'row',
+                }}>
                 <Image source={Homepic2} />
+                <View style={{padding: 10}}>
+                  <Text
+                    style={{
+                      fontFamily: 'Roboto',
+                      fontStyle: 'normal',
+                      fontWeight: 'bold',
+                      fontSize: 12,
+                      lineHeight: 14,
+                      maxWidth: 250,
+                    }}>
+                    How to harvest in scientific way in western Nepal
+                  </Text>
+                  <Text
+                    style={{
+                      fontFamily: 'Roboto',
+                      fontStyle: 'normal',
+                      fontWeight: 'normal',
+                      fontSize: 12,
+                      lineHeight: 14,
+                      maxWidth: 250,
+                    }}>
+                    According to the Nepal Telecommunication Authority, there
+                    are more than 38.3 million
+                  </Text>
+                </View>
               </View>
-              <View style={{padding: 10}}>
-                <Text
-                  style={{
-                    fontFamily: 'Roboto',
-                    fontStyle: 'normal',
-                    fontWeight: 'bold',
-                    fontSize: 12,
-                    lineHeight: 14,
-                  }}>
-                  How to grow vegetables in scientific way in Hilli regions
-                </Text>
-                <Text
-                  style={{
-                    flexWrap: 'wrap',
-                    fontFamily: 'Roboto',
-                    fontStyle: 'normal',
-                    fontWeight: 'normal',
-                    fontSize: 12,
-                    lineHeight: 14,
-                    fontColor: '#969393',
-                  }}>
-                  Android application for seasonal Agro-Information is an
-                  application targeted for farmers across the country who use
-                  android mobile phones.
-                </Text>
-              </View>
-            </View>
-            <View
-              style={{
-                flexDirection: 'row',
-              }}>
-              <Image source={Homepic2} />
-              <View style={{padding: 10}}>
-                <Text
-                  style={{
-                    fontFamily: 'Roboto',
-                    fontStyle: 'normal',
-                    fontWeight: 'bold',
-                    fontSize: 12,
-                    lineHeight: 14,
-                  }}>
-                  How to harvest in scientific way in western Nepal
-                </Text>
-                <Text
-                  style={{
-                    fontFamily: 'Roboto',
-                    fontStyle: 'normal',
-                    fontWeight: 'normal',
-                    fontSize: 12,
-                    lineHeight: 14,
-                  }}>
-                  According to the Nepal Telecommunication Authority, there are
-                  more than 38.3 million
-                </Text>
-              </View>
-            </View>
-            <View
-              style={{
-                flexDirection: 'row',
-              }}>
-              <View>
-                <Image source={Homepic2} />
-              </View>
-              <View style={{padding: 10}}>
-                <Text
-                  style={{
-                    fontFamily: 'Roboto',
-                    fontStyle: 'normal',
-                    fontWeight: 'bold',
-                    fontSize: 12,
-                    lineHeight: 14,
-                  }}>
-                  Weather in Eastorn terial region for Dhan kheti
-                </Text>
-                <Text
-                  style={{
-                    flexWrap: 'wrap',
-                    fontFamily: 'Roboto',
-                    fontStyle: 'normal',
-                    fontWeight: 'normal',
-                    fontSize: 12,
-                    lineHeight: 14,
-                  }}>
-                  What is Lorem Ipsum Lorem Ipsum is simply dummy text of the
-                  printing
-                </Text>
+              <View
+                style={{
+                  flexDirection: 'row',
+                }}>
+                <View>
+                  <Image source={Homepic2} />
+                </View>
+                <View style={{padding: 10}}>
+                  <Text
+                    style={{
+                      fontFamily: 'Roboto',
+                      fontStyle: 'normal',
+                      fontWeight: 'bold',
+                      fontSize: 12,
+                      lineHeight: 14,
+                      maxWidth: 250,
+                    }}>
+                    Weather in Eastorn terial region for Dhan kheti
+                  </Text>
+                  <Text
+                    style={{
+                      flexWrap: 'wrap',
+                      fontFamily: 'Roboto',
+                      fontStyle: 'normal',
+                      fontWeight: 'normal',
+                      fontSize: 12,
+                      lineHeight: 14,
+                      maxWidth: 250,
+                    }}>
+                    What is Lorem Ipsum Lorem Ipsum is simply dummy text of the
+                    printing
+                  </Text>
+                </View>
               </View>
             </View>
           </View>
